@@ -5,7 +5,7 @@ library("pals")
 library("oompaBase")
 
 gre_score <- 160
-noised_score <- gre_score + rtruncnorm(mean=0, sd=1.5, n = 1, a = -3, b = 3)
+noised_score <- gre_score + rtruncnorm(mean=0, sd=1, n = 1, a = -3, b = 3)
 score <- noised_score
 palette <- warmcool(50) #greenscale(50) parula(50)
 col_num <- number2color(score, colors = palette, ncol = 50, equidistant = TRUE, xmin = min(127), xmax = max(173))
