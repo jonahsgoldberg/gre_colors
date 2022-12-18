@@ -12,7 +12,7 @@ ui <- fluidPage(
   # Add a text input for the GRE score
   textInput(inputId = "gre_score", label = "GRE Score:"),
   # Add a checkbox to toggle the use of the noised score
-  checkboxInput(inputId = "use_noise", label = "Add Noise"),
+  checkboxInput(inputId = "use_noise", label = "Add Noise", value = "150"),
   # Add radio buttons to select the color palette
   radioButtons(inputId = "palette", label = "Color Palette:", 
                choices = c("Red to Blue" = "warmcool", "Dark Green to Light Green" = "greenscale", "Blue to Yellow" = "parula"),
