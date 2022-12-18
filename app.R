@@ -1,7 +1,9 @@
+setwd("~/Documents/R/gre_color")
 library(tidyverse)
 library(npreg)
 library(truncnorm)
 library(pals)
+library(oompaBase)
 library(shiny)
 library(rsconnect)
 
@@ -11,7 +13,7 @@ ui <- fluidPage(
   textInput(inputId = "gre_score", label = "GRE Score:", value = "150"),
   # Add radio buttons to select the color palette
   radioButtons(inputId = "palette", label = "Color Palette:", 
-               choices = c("Warmcool" = "warmcool", "Greenscale" = "greenscale", "Parula" = "parula"),
+               choices = c("Red to Blue" = "warmcool", "Dark Green to Light Green" = "greenscale", "Blue to Yellow" = "parula"),
                selected = "warmcool"),
   # Add a plot output to display the gre_color plot
   plotOutput(outputId = "gre_color_plot")
