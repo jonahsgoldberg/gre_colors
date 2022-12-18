@@ -24,7 +24,7 @@ server <- function(input, output) {
   # Reactive function to generate the gre_color plot
   gre_color_plot <- reactive({
     # Calculate the noised score using the input GRE score
-    noised_score <- as.numeric(input$gre_score) + rtruncnorm(mean=0, sd=1.5, n = 1, a = -3, b = 3)
+    noised_score <- as.numeric(input$gre_score) + rtruncnorm(mean=0, sd=1, n = 1, a = -3, b = 3)
     
     # Generate the color palette and map the noised score to a color
     palette_function <- get(input$palette)
