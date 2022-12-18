@@ -37,7 +37,7 @@ server <- function(input, output) {
     
     # Create the gre_color plot using ggplot2
     gre_color <- ggplot(df, aes(colour = palette)) +
-      geom_point(aes(x, y), color = col_num, size = 120, shape = "square") +
+      geom_point(aes(x, y), color = col_num, size = 200, shape = "square") +
       scale_x_continuous(limits = c(-1, 1)) +
       scale_y_continuous(limits = c(-1, 1)) + 
       theme_void()
