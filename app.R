@@ -10,9 +10,9 @@ library(shiny)
 # Define the user interface for the Shiny app
 ui <- fluidPage(
   # Add a text input for the GRE score
-  textInput(inputId = "gre_score", label = "GRE Score:"),
+  textInput(inputId = "gre_score", label = "GRE Score:", value = "150"),
   # Add a checkbox to toggle the use of the noised score
-  checkboxInput(inputId = "use_noise", label = "Add Noise", value = "150"),
+  checkboxInput(inputId = "use_noise", label = "Add Noise", value = TRUE),
   # Add radio buttons to select the color palette
   radioButtons(inputId = "palette", label = "Color Palette:", 
                choices = c("Red to Blue" = "warmcool", "Dark Green to Light Green" = "greenscale", "Blue to Yellow" = "parula"),
